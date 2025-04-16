@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Launch Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="YOUR_INTEGRITY_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">       
+    <link rel="stylesheet" href="style.css">
     </style>
 </head>
+
 <body class="bg-gray-100">
     <header class="bg-indigo-600 text-white py-4 md:py-6">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-xl md:text-2xl font-semibold">
+                <!-- <h1 class="text-xl md:text-2xl font-semibold">
                     <span class="font-bold">Product</span> Showcase
-                </h1>
+                </h1> -->
                 <nav>
                     <ul class="flex space-x-4 md:space-x-6">
                         <li><a href="#home" class="hover:text-indigo-200 transition duration-300">Home</a></li>
-                        <li><a href="#motivation" class="hover:text-indigo-200 transition duration-300">Motivation</a></li>
-                        <li><a href="#key-ideas" class="hover:text-indigo-200 transition duration-300">Key Ideas</a></li>
+                        <li><a href="#motivation" class="hover:text-indigo-200 transition duration-300">Motivation</a>
+                        </li>
+                        <li><a href="#key-ideas" class="hover:text-indigo-200 transition duration-300">Key Ideas</a>
+                        </li>
                         <li><a href="#features" class="hover:text-indigo-200 transition duration-300">Features</a></li>
                         <li><a href="#vision" class="hover:text-indigo-200 transition duration-300">Vision</a></li>
-                        <li><a href="#contact" class="hover:text-indigo-200 transition duration-300">Contact</a></li>
+                        <!-- <li><a href="#contact" class="hover:text-indigo-200 transition duration-300">Contact</a></li> -->
                     </ul>
                 </nav>
             </div>
@@ -31,7 +37,7 @@
     </header>
 
     <main class="container mx-auto px-4 py-8 md:py-12">
-        <section id="home" class="text-center mb-16 md:mb-20">
+        <!-- <section id="home" class="text-center mb-16 md:mb-20">
             <h2 class="text-3xl md:text-4xl font-semibold text-indigo-700 mb-4">
                 Introducing \[Your Product Name]
             </h2>
@@ -41,101 +47,182 @@
             <button onclick="window.location.href='#contact'" class="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 text-base md:text-lg">
                 Learn More
             </button>
-        </section>
+        </section> -->
 
         <section id="motivation" class="mb-16 md:mb-20">
-            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Our Motivation</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Motivation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div class="prose prose-indigo">
-                    <p>
-                        We believe that \[Clearly state the problem your product solves].
+                    <p class="text-gray-700">
+                        In today's technological landscape, we are surrounded by numerous software tools designed to
+                        streamline various aspects of our work.
+                        These tools empower individuals and companies, simplifying processes from product ideation and
+                        design to development, marketing, and sales. However, amidst this abundance of tools, a
+                        fundamental challenge persists.
                     </p>
-                    <p>
-                        Current solutions are often \[Describe the shortcomings of existing solutions].
+
+                    <h3 class="text-xl font-semibold text-indigo-700 mt-6 pb-2">The Challenge</h3>
+
+                    <p class="text-gray-700">
+                        Thoughtful decision-making is crucial for success, and making effective future decisions
+                        requires accurate knowledge of past decision rationales, their outcomes, and the original
+                        context.
+                        Yet, the rationales and crucial context behind these decisions are often fragmented and
+                        difficult to access.
+                        We either attempt to piece this information together by pulling context from various tools, or
+                        we rely on the memories of individuals involved.
+                        More often than not, when we depend on the latter, we experience the pitfalls of human biases.
+                        Scattered across disparate tools, communication channels, and individual notes, the "why" behind
+                        our actions becomes obscured.
+                        This reliance on manually aggregating and interpreting information, whether from scattered
+                        sources or individual recollections, is prone to subjective biases, incomplete data, and
+                        ultimately, ineffective outcomes.
                     </p>
-                    <p>
-                        That's why we created \[Your Product Name] to \[Explain the core value proposition and how it addresses the problem].
+
+                    <h3 class="text-xl font-semibold text-indigo-700 mt-6 pb-2">The Solution</h3>
+
+                    <p class="text-gray-700">
+                        In this modern era, where our minds are often fragmented across a multitude of tools and
+                        solutions, a simple, adaptable, and effective "frame" of "mind" is more necessary than ever to
+                        do our best "work".
+                        This need has driven the creation of W.A.D.E, a unifying "framework" for doing "work," which
+                        incentivizes clear ownership decisions, transparency of rationale, and, above all, minimizes the
+                        pitfalls of human-biased subjective narratives.
+                        By establishing a single source of truth that promotes these principles, this framework enables
+                        us to make thoughtful and effective decisions, leading to more impactful choices with greater
+                        clarity, alignment, and confidence.
                     </p>
                 </div>
-                <div class="flex items-center justify-center">
+                <!-- <div class="flex items-center justify-center">
                     <img src="https://placehold.co/600x400/EEE/31343C" alt="Motivation Image" class="rounded-lg shadow-lg" />
-                </div>
+                </div> -->
             </div>
         </section>
 
         <section id="key-ideas" class="mb-16 md:mb-20">
-            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Key Ideas Behind \[Your Product Name]</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                    <h3 class="text-xl font-semibold text-indigo-600 mb-4">\[Key Idea 1]</h3>
+            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Key Ideas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-4 flex items-center">
+                        <div>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x icon-a"></i>
+                                <i class="fa-solid fa-w fa-stack-1x text-white"></i>
+                            </span>
+                        </div>
+                        <span class="-ml-1">orkstreams</span>
+                    </h3>
                     <p class="text-gray-700">
-                        \[Explain the first key idea.  Focus on the core technology, design principle, or innovative approach.  Why is it important?]
+                        Workstream is similar to Projects in the classic sense. Workstreams are related to other
+                        workstreams by hierarchical relations. They have three key types of constructs: decisions,
+                        events & actions.
                     </p>
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Key Idea 1" class="rounded-md mt-4" />
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                    <h3 class="text-xl font-semibold text-indigo-600 mb-4">\[Key Idea 2]</h3>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-4 flex items-center">
+                        <div>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x icon-a"></i>
+                                <i class="fa-solid fa-a fa-stack-1x text-white"></i>
+                            </span>
+                        </div>
+                        <span class="-ml-1">ctions</span>
+                    </h3>
                     <p class="text-gray-700">
-                        \[Explain the second key idea. How does it contribute to the product's value and differentiation?]
+                        Actions are performed by a user on a workstream which drive it towards its intended goal.
                     </p>
-                     <img src="https://placehold.co/300x200/EEE/31343C" alt="Key Idea 2" class="rounded-md mt-4" />
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
-                    <h3 class="text-xl font-semibold text-indigo-600 mb-4">\[Key Idea 3]</h3>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-4 flex items-center">
+                        <div>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x icon-a"></i>
+                                <i class="fa-solid fa-d fa-stack-1x text-white"></i>
+                            </span>
+                        </div>
+                        <span class="-ml-1">ecisions</span>
+                    </h3>
                     <p class="text-gray-700">
-                       \[Explain the third key idea.  This could be about the user experience, sustainability, or a unique feature.]
+                        Decisions enforce the user to take ownership and capture intent with clarity and purpose.
+                        Decisions are the only constructs which can change the state of a workstream, encouraging
+                        thoughtfulness.
+
                     </p>
-                    <img src="https://placehold.co/300x200/EEE/31343C" alt="Key Idea 3" class="rounded-md mt-4" />
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-4 flex items-center">
+                        <div>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x icon-a"></i>
+                                <i class="fa-solid fa-e fa-stack-1x text-white"></i>
+                            </span>
+                        </div>
+                        <span class="-ml-1">vents</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        Events are recorded on a workstream for context and awareness.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="features" class="mb-16 md:mb-20">
-            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Key Features</h2>
+            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6 text-center">Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-6 flex items-start">
-                    <div class="mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-indigo-500"><path d="M10.21 4.13a8 8 0 1 0 9.66 9.66"/><path d="m9 12 2 2 4-4"/></svg>
-                    </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">\[Feature 1 Title]</h3>
-                        <p class="text-gray-600">\[Feature 1 Description.  Explain what this feature does and why it's beneficial.]</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 flex items-center">
+                            <div class="mr-2">
+                                <i class="fas fa-check-circle text-indigo-500"></i>
+                            </div>
+                            Quick Discovery & Insights
+                        </h3>
+                        <p class="text-gray-600">Discover workstreams though an interactive visual tree which surfaces
+                            status.</p>
+                        <img src="./assets/WS_Relationships.png" alt="Key Idea 1" class="rounded-md mt-4" />
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 flex items-start">
-                    <div class="mr-4">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-indigo-500"><path d="M10.21 4.13a8 8 0 1 0 9.66 9.66"/><path d="m9 12 2 2 4-4"/></svg>
-                    </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">\[Feature 2 Title]</h3>
-                        <p class="text-gray-600">\[Feature 2 Description. Explain what this feature does and why it's beneficial.]</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 flex items-center">
+                            <div class="mr-2">
+                                <i class="fas fa-check-circle text-indigo-500"></i>
+                            </div>
+                            Effective timeline visualization
+                        </h3>
+                        <p class="text-gray-600">See a time based logs of decisions, actions & events pertaining to the
+                            workstream.</p>
+                        <img src="./assets/WS_Logs_small.png" alt="Key Idea 1" class="rounded-md mt-4" />
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 flex items-start">
-                    <div class="mr-4">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2 text-indigo-500"><path d="M10.21 4.13a8 8 0 1 0 9.66 9.66"/><path d="m9 12 2 2 4-4"/></svg>
-                    </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">\[Feature 3 Title]</h3>
-                        <p class="text-gray-600">\[Feature 3 Description. Explain what this feature does and why it's beneficial.]</p>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 flex items-center">
+                            <div class="mr-2">
+                                <i class="fas fa-check-circle text-indigo-500"></i>
+                            </div>
+                            AI Powered Insights
+                        </h3>
+                        <p class="text-gray-600">Get a personalized AI assistant who will answer your questions based on
+                            the data!</p>
+                        <img class="h-80 mx-auto" src="./assets/WS_AI.png" alt="Key Idea 1" class="rounded-md mt-4" />
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="vision" class="mb-16 md:mb-20 text-center">
-            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6">Our Vision</h2>
+            <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 mb-6">Vision</h2>
             <div class="prose prose-indigo mx-auto">
-                <p>
-                    We envision a future where \[Describe your long-term vision related to your product.  What impact will it have?  What change do you want to see in the world?].
-                </p>
-                <p>
-                    With \[Your Product Name], we aim to \[State your mission and how your product will help achieve that vision].
+                <p class="pb-2">
+                    To empower individuals, teams, and organizations across all sectors to operate with integrity and
+                    transparency, fostering a world where mindful decisions are made with the most accurate and unbiased
+                    insights.
                 </p>
             </div>
         </section>
 
-        <section id="contact" class="bg-indigo-100 rounded-lg shadow-md p-6 md:p-8 text-center">
+        <!-- <section id="contact" class="bg-indigo-100 rounded-lg shadow-md p-6 md:p-8 text-center">
             <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Get in Touch</h2>
             <p class="text-gray-700 mb-6">
                 We'd love to hear from you!  Contact us for more information, partnerships, or investment opportunities.
@@ -148,8 +235,9 @@
 
     <footer class="bg-gray-200 text-gray-600 py-4 text-center">
         <p>© 2025 \[Your Product Name]. All rights reserved.</p>
-    </footer>
+    </footer> -->
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>
