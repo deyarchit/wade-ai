@@ -11,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="font-sans bg-white text-gray-900">
     <header class="fixed w-full top-0 z-10">
         <!-- <div class="bg-gray-100 text-gray-600 py-2.5 text-center text-sm">
             <p>Early Access Opportunity: <a href="#contact" class="text-teal-500 underline">Learn More</a></p>
@@ -37,21 +37,22 @@
     </header>
 
     <main>
-        <section id="home"
-            class="bg-cover bg-center h-[80vh] flex flex-col justify-center items-center text-center p-4">
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">W.A.D.E</h1>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl">
-                Empowering individuals and teams to make mindful decisions with accurate, unbiased insights.
+        <section id="home" 
+            class="bg-cover bg-center h-[80vh] flex flex-col justify-center items-center text-center p-4 pt-4">
+            <h1 class="text-6xl font-bold text-gray-900 mb-4 leading-tight max-w-[80%]">Accurate Context for 
+                <span class="text-teal-500">Smarter Decisions</span></h1>
+            <p class="text-2xl text-gray-600 mb-8 max-w-[60%]">
+                A powerful framework for organizing your work and delivering insightful decision-making context
             </p>
-            <button onclick="window.location.href='#contact'"
-                class="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition duration-300 shadow-md">Learn
-                More</button>
+            <!-- <button onclick="window.location.href='#contact'"
+                class="bg-black hover:bg-teal-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition duration-300 shadow-md">Learn
+                More</button> -->
         </section>
 
         <section id="motivation" class="py-16">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-semibold text-gray-900 text-center mb-12">Motivation</h2>
-                <div class="grid grid-cols-1 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="text-gray-700">
                         <p class="text-gray-700">
                             In today's technological landscape, we are surrounded by numerous software tools designed to
@@ -101,6 +102,9 @@
                             greater
                             clarity, alignment, and confidence.
                         </p>
+                    </div>
+                    <div class="hidden md:block">
+                        <img src="./assets/Decision_Insights_Vertical.svg" alt="Motivation" class="">
                     </div>
                 </div>
             </div>
@@ -233,7 +237,7 @@
             </div>
         </section>
 
-        <section id="contact" class="bg-gray-100 text-gray-900 py-12 text-center">
+        <!-- <section id="contact" class="bg-gray-100 text-gray-900 py-12 text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
                 <p class="text-lg text-gray-600 mb-6">
@@ -244,12 +248,12 @@
                     class="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition duration-300">Contact
                     Us</a>
             </div>
-        </section>
+        </section> -->
     </main>
 
-    <footer class="bg-gray-100 text-gray-600 py-8 text-center border-t border-gray-200">
+    <!-- <footer class="bg-gray-100 text-gray-600 py-8 text-center border-t border-gray-200">
         <p>© 2025 W.A.D.E. All rights reserved.</p>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
