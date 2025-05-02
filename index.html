@@ -9,51 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Styles for the scroll reveal animation */
-        .scroll-reveal-item .reveal-letter,
-        .scroll-reveal-item .reveal-content {
-            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-        }
-
-        .scroll-reveal-item .reveal-letter {
-            transition-delay: 0.1s;
-            /* Letter appears slightly first */
-        }
-
-        .scroll-reveal-item .reveal-content {
-            transition-delay: 0.25s;
-            /* Content appears after letter */
-        }
-
-        /* Initial state (hidden) */
-        .scroll-reveal-item:not(.is-visible) .reveal-letter {
-            opacity: 0;
-        }
-
-        .scroll-reveal-item:not(.is-visible) .reveal-content {
-            opacity: 0;
-            transform: translateY(1rem);
-            /* Slight upward movement on reveal */
-        }
-
-        /* Final state (visible) */
-        .scroll-reveal-item.is-visible .reveal-letter {
-            opacity: 1;
-        }
-
-        .scroll-reveal-item.is-visible .reveal-content {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Ensure enough space between items */
-        .scroll-reveal-item+.scroll-reveal-item {
-            margin-top: 6rem;
-            /* Adjust as needed for desired spacing */
-        }
-    </style>
+    <script src="script.js"></script>
 </head>
 
 <body class="font-sans bg-white text-gray-900">
@@ -91,7 +49,8 @@
 
         <section id="challenge" class="py-40">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-16">The Challenge We Solve</h2>
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-16">The Challenge We Solve
+                </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                     <div class="text-gray-700 text-lg leading-relaxed space-y-10">
 
@@ -99,26 +58,25 @@
                             <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
                                 </i>The Challenge: Scattered Context & Ineffective Decisions
                             </h3>
-                            <ul class="list-none space-y-3 text-gray-600 pl-1"> 
+                            <ul class="list-none space-y-3 text-gray-600 pl-1">
                                 <li class="flex items-start">
                                     <i class="fas fa-tools text-gray-500 mr-3 mt-1"></i>
-                                    <span>Modern tools streamline tasks, but crucial decision context gets lost.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-question-circle text-gray-500 mr-3 mt-1"></i>
-                                    <span>Understanding the "why" behind past choices is vital for future success, yet often unclear.</span>
+                                    <span>Modern tools streamline tasks, but crucial project context gets scattered
+                                        across them.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-sitemap text-gray-500 mr-3 mt-1"></i>
-                                    <span>Decision rationale becomes scattered across disparate tools and chats.</span>
+                                    <span>Decision rationales are not captured and get easily lost.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-question-circle text-gray-500 mr-3 mt-1"></i>
+                                    <span>Understanding the "why" behind past decisions is vital for future success, but
+                                        often unclear and difficult to find.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-user-clock text-gray-500 mr-3 mt-1"></i>
-                                    <span>Key information disappears or relies on incomplete, biased human memory.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-layer-group text-gray-500 mr-3 mt-1"></i>
-                                    <span>Manually gathering context is inefficient, slow, and prone to errors.</span>
+                                    <span>Decision-making context is often pulled from our memories, which can be
+                                        influenced by biases.</span>
                                 </li>
                             </ul>
                         </div>
@@ -130,7 +88,8 @@
                             <ul class="list-none space-y-3 text-gray-600 pl-1">
                                 <li class="flex items-start">
                                     <i class="fas fa-link text-gray-500 mr-3 mt-1"></i>
-                                    <span>Provides a simple, unifying framework to organize fragmented information.</span>
+                                    <span>Provides a simple, unifying framework to organize fragmented
+                                        information.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-shield-alt text-gray-500 mr-3 mt-1"></i>
@@ -139,10 +98,11 @@
                                 <li class="flex items-start">
                                     <i class="fas fa-bullseye text-gray-500 mr-3 mt-1"></i>
                                     <span>Encourages clear ownership and transparent rationale for decisions.</span>
-                                </li>                                
-                                 <li class="flex items-start">
+                                </li>
+                                <li class="flex items-start">
                                     <i class="fas fa-brain text-gray-500 mr-3 mt-1"></i>
-                                    <span>Enables truly informed decision-making with AI-powered insights based on structured data.</span>
+                                    <span>Enables truly informed decision-making with AI-powered insights based on
+                                        structured data.</span>
                                 </li>
                             </ul>
                         </div>
@@ -164,7 +124,8 @@
                     <div class="reveal-content mt-3">
                         <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Workstreams</span>
                         <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            Central component of the framework that organizes key project elements: Decisions, Events, and Actions. They connect to other Workstreams to represent relationships. 
+                            Central component of the framework that organizes key project elements: Decisions, Events,
+                            and Actions. They connect to other Workstreams to represent relationships.
                         </p>
                     </div>
                 </div>
@@ -189,8 +150,8 @@
                     <div class="reveal-content mt-3">
                         <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Decisions</span>
                         <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            These capture the intent and rationale behind a Workstream’s actions. 
-                            They are the only elements that change a Workstream’s state, promoting mindful choices.                           
+                            These capture the intent and rationale behind a Workstream’s actions.
+                            They are the only elements that change a Workstream’s state, promoting mindful choices.
                         </p>
                     </div>
                 </div>
@@ -238,8 +199,7 @@
                         </h3>
                         <p class="text-gray-600 mb-4">Discover workstreams though an interactive visual tree which
                             surfaces status.</p>
-                        <img src="./assets/WS_Relationships.png" alt="Workstream Relationships"
-                            class="rounded-md " />
+                        <img src="./assets/WS_Relationships.png" alt="Workstream Relationships" class="rounded-md " />
                     </div>
                     <div class="bg-white rounded-lg p-6 shadow-lg transition transform hover:scale-105 duration-300">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
@@ -248,8 +208,7 @@
                         </h3>
                         <p class="text-gray-600 mb-4">See a time based log of decisions, actions & events pertaining to
                             the workstream.</p>
-                        <img src="./assets/WS_Logs_small.png" alt="Workstream Logs"
-                            class="rounded-md " />
+                        <img src="./assets/WS_Logs_small.png" alt="Workstream Logs" class="rounded-md " />
                     </div>
                     <div class="bg-white rounded-lg p-6 shadow-lg transition transform hover:scale-105 duration-300">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
@@ -257,8 +216,7 @@
                         </h3>
                         <p class="text-gray-600 mb-4">Get a personalized AI assistant who will answer your questions
                             based on the data!</p>
-                        <img class="rounded-md " src="./assets/WS_AI.png"
-                            alt="Workstream AI Assistant" />
+                        <img class="rounded-md " src="./assets/WS_AI.png" alt="Workstream AI Assistant" />
                     </div>
                 </div>
             </div>
@@ -280,43 +238,6 @@
         </section>
 
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const revealItems = document.querySelectorAll('.scroll-reveal-item');
-
-            // Staggering delay function (currently not used, delays set in CSS)
-            const staggerDelay = (element, baseDelay = 0) => {
-                // Placeholder for potential future staggering logic
-            };
-
-            const observerOptions = {
-                root: null, // relative to the viewport
-                rootMargin: '0px 0px -10% 0px', // Trigger a bit sooner (10% from bottom)
-                threshold: 0.1 // Trigger when 10% of the item is visible
-            };
-
-            const observerCallback = (entries, observer) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        // Add the .is-visible class to trigger the CSS transition
-                        entry.target.classList.add('is-visible');
-                        // Stop observing the element once it has become visible
-                        observer.unobserve(entry.target);
-                    }
-                });
-            };
-
-            // Create and start the observer
-            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
-
-            // Observe each target element
-            revealItems.forEach(item => {
-                intersectionObserver.observe(item);
-            });
-        });
-    </script>
-
 </body>
 
 </html>
