@@ -1,0 +1,46 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styles for the scroll reveal animation */
+.scroll-reveal-item .reveal-letter,
+.scroll-reveal-item .reveal-content {
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-reveal-item .reveal-letter {
+  transition-delay: 0.1s;
+  /* Letter appears slightly first */
+}
+
+.scroll-reveal-item .reveal-content {
+  transition-delay: 0.25s;
+  /* Content appears after letter */
+}
+
+/* Initial state (hidden) */
+.scroll-reveal-item:not(.is-visible) .reveal-letter {
+  opacity: 0;
+}
+
+.scroll-reveal-item:not(.is-visible) .reveal-content {
+  opacity: 0;
+  transform: translateY(1rem);
+  /* Slight upward movement on reveal */
+}
+
+/* Final state (visible) */
+.scroll-reveal-item.is-visible .reveal-letter {
+  opacity: 1;
+}
+
+.scroll-reveal-item.is-visible .reveal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure enough space between items */
+.scroll-reveal-item+.scroll-reveal-item {
+  margin-top: 6rem;
+  /* Adjust as needed for desired spacing */
+}
