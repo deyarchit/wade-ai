@@ -7,20 +7,62 @@
     <title>W.A.D.E - Empowering Mindful Decisions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="YOUR_INTEGRITY_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Styles for the scroll reveal animation */
+        .scroll-reveal-item .reveal-letter,
+        .scroll-reveal-item .reveal-content {
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .scroll-reveal-item .reveal-letter {
+            transition-delay: 0.1s;
+            /* Letter appears slightly first */
+        }
+
+        .scroll-reveal-item .reveal-content {
+            transition-delay: 0.25s;
+            /* Content appears after letter */
+        }
+
+        /* Initial state (hidden) */
+        .scroll-reveal-item:not(.is-visible) .reveal-letter {
+            opacity: 0;
+        }
+
+        .scroll-reveal-item:not(.is-visible) .reveal-content {
+            opacity: 0;
+            transform: translateY(1rem);
+            /* Slight upward movement on reveal */
+        }
+
+        /* Final state (visible) */
+        .scroll-reveal-item.is-visible .reveal-letter {
+            opacity: 1;
+        }
+
+        .scroll-reveal-item.is-visible .reveal-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ensure enough space between items */
+        .scroll-reveal-item+.scroll-reveal-item {
+            margin-top: 6rem;
+            /* Adjust as needed for desired spacing */
+        }
+    </style>
 </head>
 
 <body class="font-sans bg-white text-gray-900">
     <header class="fixed w-full top-0 z-10">
-        <!-- <div class="bg-gray-100 text-gray-600 py-2.5 text-center text-sm">
-            <p>Early Access Opportunity: <a href="#contact" class="text-teal-500 underline">Learn More</a></p>
-        </div> -->
-        <nav class="bg-white text-gray-900 py-4 md:py-6">
+        <nav class="bg-white text-gray-900 py-4 md:py-6 shadow-sm">
             <div class="container mx-auto px-4">
                 <div class="flex justify-between items-center">
                     <a href="/" class="text-xl md:text-2xl font-semibold">
-                        <image src="./assets/full_logo.svg" alt="logo" class="h-12 md:h-14"></image>
+                        <img src="./assets/full_logo.svg" alt="WADE AI Logo" class="h-12 md:h-14">
                     </a>
                     <ul class="flex space-x-4 md:space-x-6">
                         <li><a href="#motivation" class="hover:text-teal-500 transition duration-300">Motivation</a>
@@ -36,197 +78,173 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home" 
-            class="bg-cover bg-center h-[80vh] flex flex-col justify-center items-center text-center p-4 pt-4">
-            <h1 class="text-6xl font-bold text-gray-900 mb-4 leading-tight max-w-[80%]">Accurate Context for 
-                <span class="text-teal-500">Smarter Decisions</span></h1>
-            <p class="text-2xl text-gray-600 mb-8 max-w-[60%]">
+    <main class="pt-24">
+        <section id="home"
+            class="bg-cover bg-center h-[calc(80vh-6rem)] flex flex-col justify-center items-center text-center p-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight max-w-3xl">Accurate Context for
+                <span class="text-teal-500">Smarter Decisions</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl">
                 A powerful framework for organizing your work and delivering insightful decision-making context
             </p>
-            <!-- <button onclick="window.location.href='#contact'"
-                class="bg-black hover:bg-teal-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition duration-300 shadow-md">Learn
-                More</button> -->
         </section>
 
-        <section id="motivation" class="py-16">
+        <section id="motivation" class="py-36">
             <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-semibold text-gray-900 text-center mb-12">Motivation</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="text-gray-700">
-                        <p class="text-gray-700">
-                            In today's technological landscape, we are surrounded by numerous software tools designed to
-                            streamline various aspects of our work.
-                            These tools empower individuals and companies, simplifying processes from product ideation
-                            and
-                            design to development, marketing, and sales. However, amidst this abundance of tools, a
-                            fundamental challenge persists.
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-16">The Challenge We Solve
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-gray-700 text-lg leading-relaxed space-y-6">
+                        <p>
+                            We rely on countless tools, but understanding the "why" behind past decisions remains a
+                            struggle. Learning from the past requires knowing the original context, rationale, and
+                            outcomes.
                         </p>
 
-                        <h3 class="text-xl font-semibold text-teal-500 mt-6 pb-2">The Challenge</h3>
+                        <div>
+                            <h3 class="text-xl font-semibold text-teal-500 mb-3">Today's Reality: Scattered Project
+                                Context & ineffective decisions</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                <li>Key project context gets lost or relies on biased human memory.</li>
+                                <li>Decision rationale is scattered across tools and chats.</li>
+                                <li>Manually piecing together information is slow and error-prone.</li>
+                            </ul>
+                        </div>
 
-                        <p class="text-gray-700">
-                            Thoughtful decision-making is crucial for success, and making effective future decisions
-                            requires accurate knowledge of past decision rationales, their outcomes, and the original
-                            context.
-                            Yet, the rationales and crucial context behind these decisions are often fragmented and
-                            difficult to access.
-                            We either attempt to piece this information together by pulling context from various tools,
-                            or
-                            we rely on the memories of individuals involved.
-                            More often than not, when we depend on the latter, we experience the pitfalls of human
-                            biases.
-                            Scattered across disparate tools, communication channels, and individual notes, the "why"
-                            behind
-                            our actions becomes obscured.
-                            This reliance on manually aggregating and interpreting information, whether from scattered
-                            sources or individual recollections, is prone to subjective biases, incomplete data, and
-                            ultimately, ineffective outcomes.
-                        </p>
-
-                        <h3 class="text-xl font-semibold text-teal-500 mt-6 pb-2">The Solution</h3>
-
-                        <p class="text-gray-700">
-                            In this modern era, where our minds are often fragmented across a multitude of tools and
-                            solutions, a simple, adaptable, and effective "frame" of "mind" is more necessary than ever
-                            to
-                            do our best "work".
-                            This need has driven the creation of W.A.D.E, a unifying "framework" for doing "work,"
-                            which
-                            incentivizes clear ownership decisions, transparency of rationale, and, above all, minimizes
-                            the
-                            pitfalls of human-biased subjective narratives.
-                            By establishing a single source of truth that promotes these principles, this framework
-                            enables
-                            us to make thoughtful and effective decisions, leading to more impactful choices with
-                            greater
-                            clarity, alignment, and confidence.
-                        </p>
+                        <div>
+                            <h3 class="text-xl font-semibold text-teal-500 mb-3">The Solution: Stay Organized, Aligned &
+                                Informed</h3>
+                            <p>
+                                WADE AI provides a simple, unifying framework to combat this fragmentation. It
+                                encourages clear ownership, transparent reasoning, and minimizes subjective bias,
+                                creating a reliable source of truth for truly informed decision-making.
+                            </p>
+                        </div>
                     </div>
-                    <div class="hidden md:block">
-                        <img src="./assets/Decision_Insights_Vertical.svg" alt="Motivation" class="">
+                    <div class="hidden md:flex justify-center items-center">
+                        <img src="./assets/Decision_Insights_Vertical.svg"
+                            alt="Diagram showing scattered information leading to biased decisions vs WADE leading to clear insights"
+                            class="max-w-sm lg:max-w-md"
+                            onerror="this.src='https://placehold.co/400x500/e2e8f0/334155?text=Motivation+Diagram'; this.alt='Placeholder for Motivation Diagram';">
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="key-ideas" class="py-16">
+        <section id="key-ideas" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-semibold text-gray-900 text-center mb-12">Key Ideas</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <span class="fa-stack">
-                                    <i class="fa fa-circle fa-stack-2x text-gray-600"></i>
-                                    <i class="fa-solid fa-w fa-stack-1x text-white"></i>
-                                </span>
-                            </div>
-                            <span class="-ml-1">orkstreams</span>
-                        </h3>
-                        <p class="text-gray-600">
-                            Workstream is similar to Projects in the classic sense. Workstreams are related to other
-                            workstreams by hierarchical relations. They have three key types of constructs: decisions,
-                            events & actions.
-                        </p>
+                <div class="scroll-reveal-item flex flex-col items-center text-center">
+                    <div class="reveal-letter">
+                        <img src="./assets/logo-W.svg" alt="WADE AI Logo" class="h-24 md:h-26">
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <span class="fa-stack">
-                                    <i class="fa fa-circle fa-stack-2x text-gray-600"></i>
-                                    <i class="fa-solid fa-a fa-stack-1x text-white"></i>
-                                </span>
-                            </div>
-                            <span class="-ml-1">ctions</span>
-                        </h3>
-                        <p class="text-gray-600">
-                            Actions are performed by a user on a workstream which drive it towards its intended goal.
-                        </p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <span class="fa-stack">
-                                    <i class="fa fa-circle fa-stack-2x text-gray-600"></i>
-                                    <i class="fa-solid fa-d fa-stack-1x text-white"></i>
-                                </span>
-                            </div>
-                            <span class="-ml-1">ecisions</span>
-                        </h3>
-                        <p class="text-gray-600">
-                            Decisions enforce the user to take ownership and capture intent with clarity and purpose.
-                            Decisions are the only constructs which can change the state of a workstream, encouraging
-                            thoughtfulness.
-                        </p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <span class="fa-stack">
-                                    <i class="fa fa-circle fa-stack-2x text-gray-600"></i>
-                                    <i class="fa-solid fa-e fa-stack-1x text-white"></i>
-                                </span>
-                            </div>
-                            <span class="-ml-1">vents</span>
-                        </h3>
-                        <p class="text-gray-600">
-                            Events are recorded on a workstream for context and awareness.
+                    <div class="reveal-content mt-3">
+                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Workstreams</span>
+                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
+                            Think of Workstreams as enhanced projects. They provide structure, can be nested
+                            hierarchically, and contain the core elements: Decisions, Events, and Actions.
                         </p>
                     </div>
                 </div>
+
+                <div class="scroll-reveal-item flex flex-col items-center text-center">
+                    <div class="reveal-letter">
+                        <img src="./assets/logo-A.svg" alt="WADE AI Logo" class="h-24 md:h-26">
+                    </div>
+                    <div class="reveal-content mt-3">
+                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Actions</span>
+                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
+                            Actions are the tasks and activities performed by users within a Workstream, driving
+                            progress towards its goals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal-item flex flex-col items-center text-center">
+                    <div class="reveal-letter">
+                        <img src="./assets/logo-D.svg" alt="WADE AI Logo" class="h-24 md:h-26">
+                    </div>
+                    <div class="reveal-content mt-3">
+                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Decisions</span>
+                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
+                            Crucial points requiring explicit ownership and rationale capture. Decisions are the only
+                            elements that change a Workstream's state, promoting mindful choices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal-item flex flex-col items-center text-center">
+                    <div class="reveal-letter">
+                        <img src="./assets/logo-E.svg" alt="WADE AI Logo" class="h-24 md:h-26">
+                    </div>
+                    <div class="reveal-content mt-3">
+                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Events</span>
+                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
+                            Significant occurrences or external factors relevant to a Workstream, recorded for context,
+                            awareness, and historical tracking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center my-16 scroll-reveal-item">
+                    <i class="fas fa-arrow-down text-3xl text-gray-400 reveal-letter"></i>
+                </div>
+
+
+                <div class="scroll-reveal-item flex flex-col items-center text-center">
+                    <div class="reveal-letter">
+                        <img src="./assets/logo-AI.svg" alt="WADE AI Logo" class="h-24 md:h-26">
+                    </div>
+                    <div class="reveal-content mt-3">
+                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Actionable Insights</span>
+                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
+                            Feeding on the captured project context, AI provides summaries, answers questions, and
+                            delivers clear, context-aware insights to inform better future decisions.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
-
         <section id="features" class="py-16">
             <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-semibold text-gray-900 text-center mb-12">Features</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <i class="fas fa-check-circle text-teal-500"></i>
-                            </div>
-                            Quick Discovery & Insights
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg transition transform hover:scale-105 duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-sitemap text-teal-500 mr-3 text-2xl"></i> Quick Discovery & Insights
                         </h3>
-                        <p class="text-gray-600">Discover workstreams though an interactive visual tree which
-                            surfaces
-                            status.</p>
-                        <img src="./assets/WS_Relationships.png" alt="Key Idea 1" class="rounded-md mt-4" />
+                        <p class="text-gray-600 mb-4">Discover workstreams though an interactive visual tree which
+                            surfaces status.</p>
+                        <img src="./assets/WS_Relationships.png" alt="Workstream Relationships"
+                            class="rounded-md aspect-video object-cover" />
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <i class="fas fa-check-circle text-teal-500"></i>
-                            </div>
-                            Effective timeline visualization
+                    <div class="bg-white rounded-lg p-6 shadow-lg transition transform hover:scale-105 duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-clock-rotate-left text-teal-500 mr-3 text-2xl"></i> Effective Timeline
+                            Visualization
                         </h3>
-                        <p class="text-gray-600">See a time based logs of decisions, actions & events pertaining to
-                            the
-                            workstream.</p>
-                        <img src="./assets/WS_Logs_small.png" alt="Key Idea 1" class="rounded-md mt-4" />
+                        <p class="text-gray-600 mb-4">See a time based log of decisions, actions & events pertaining to
+                            the workstream.</p>
+                        <img src="./assets/WS_Logs_small.png" alt="Workstream Logs"
+                            class="rounded-md aspect-video object-cover" />
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-md transition transform hover:translate-y-[-0.5rem]">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2 flex items-center">
-                            <div class="mr-2">
-                                <i class="fas fa-check-circle text-teal-500"></i>
-                            </div>
-                            AI Powered Insights
+                    <div class="bg-white rounded-lg p-6 shadow-lg transition transform hover:scale-105 duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-robot text-purple-600 mr-3 text-2xl"></i> AI Powered Insights
                         </h3>
-                        <p class="text-gray-600">Get a personalized AI assistant who will answer your questions
-                            based on
-                            the data!</p>
-                        <img class="h-80 mx-auto rounded-md mt-4" src="./assets/WS_AI.png" alt="Key Idea 1" />
+                        <p class="text-gray-600 mb-4">Get a personalized AI assistant who will answer your questions
+                            based on the data!</p>
+                        <img class="rounded-md aspect-video object-cover" src="./assets/WS_AI.png"
+                            alt="Workstream AI Assistant" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="vision" class="py-16 bg-gray-50 rounded-lg mt-16">
+        <section id="vision" class="py-16 bg-gray-50 mt-16">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-8">Vision</h2>
-                <div class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
-                    <p class="pb-2">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">Vision</h2>
+                <div class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    <p>
                         To empower individuals, teams, and organizations across all sectors to operate with integrity
                         and
                         transparency, fostering a world where mindful decisions are made with the most accurate and
@@ -237,23 +255,44 @@
             </div>
         </section>
 
-        <!-- <section id="contact" class="bg-gray-100 text-gray-900 py-12 text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
-                <p class="text-lg text-gray-600 mb-6">
-                    We'd love to hear from you! Contact us for more information, partnerships, or investment
-                    opportunities.
-                </p>
-                <a href="mailto:info@yourproduct.com"
-                    class="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition duration-300">Contact
-                    Us</a>
-            </div>
-        </section> -->
     </main>
 
-    <!-- <footer class="bg-gray-100 text-gray-600 py-8 text-center border-t border-gray-200">
-        <p>© 2025 W.A.D.E. All rights reserved.</p>
-    </footer> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealItems = document.querySelectorAll('.scroll-reveal-item');
+
+            // Staggering delay function (currently not used, delays set in CSS)
+            const staggerDelay = (element, baseDelay = 0) => {
+                // Placeholder for potential future staggering logic
+            };
+
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px 0px -10% 0px', // Trigger a bit sooner (10% from bottom)
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Add the .is-visible class to trigger the CSS transition
+                        entry.target.classList.add('is-visible');
+                        // Stop observing the element once it has become visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            // Create and start the observer
+            const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+            // Observe each target element
+            revealItems.forEach(item => {
+                intersectionObserver.observe(item);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
