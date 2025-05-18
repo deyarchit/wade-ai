@@ -42,16 +42,16 @@ function startCarousel(carouselId) {
             } else {
                 nextSlide();
             }
-            clearInterval(carouselInterval);  // Clear interval on manual control
-            startCarousel(carouselId);     // Restart interval
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(nextSlide, 5000);
         });
     });
 
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             goToSlide(index);
-            clearInterval(carouselInterval);  // Clear interval on manual navigation
-            startCarousel(carouselId);     // Restart interval
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(nextSlide, 5000);
         });
     });
 
