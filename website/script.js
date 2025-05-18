@@ -1,33 +1,76 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const revealItems = document.querySelectorAll('.scroll-reveal-item');
+let carouselInterval;
 
-    // Staggering delay function (currently not used, delays set in CSS)
-    const staggerDelay = (element, baseDelay = 0) => {
-        // Placeholder for potential future staggering logic
-    };
+function startCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const inner = carousel.querySelector('.carousel-inner');
+    const items = Array.from(inner.children);
+    let currentIndex = 0;
+    const indicators = Array.from(carousel.querySelectorAll('.carousel-indicator'));
+    const controls = carousel.querySelectorAll('.carousel-control-button');
 
-    const observerOptions = {
-        root: null, // relative to the viewport
-        rootMargin: '0px 0px -10% 0px', // Trigger a bit sooner (10% from bottom)
-        threshold: 0.1 // Trigger when 10% of the item is visible
-    };
 
-    const observerCallback = (entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add the .is-visible class to trigger the CSS transition
-                entry.target.classList.add('is-visible');
-                // Stop observing the element once it has become visible
-                observer.unobserve(entry.target);
-            }
+    function updateIndicators(index) {
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
         });
-    };
+    }
 
-    // Create and start the observer
-    const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+    function goToSlide(index) {
+        if (index < 0) {
+            index = items.length - 1;
+        } else if (index >= items.length) {
+            index = 0;
+        }
+        currentIndex = index;
+        inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateIndicators(currentIndex);
+    }
 
-    // Observe each target element
-    revealItems.forEach(item => {
-        intersectionObserver.observe(item);
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    controls.forEach(control => {
+        control.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (control.classList.contains('prev')) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+            clearInterval(carouselInterval);  // Clear interval on manual control
+            startCarousel(carouselId);     // Restart interval
+        });
     });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+            clearInterval(carouselInterval);  // Clear interval on manual navigation
+            startCarousel(carouselId);     // Restart interval
+        });
+    });
+
+    // Initial setup
+    goToSlide(currentIndex);
+
+    // Autoplay
+    carouselInterval = setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        startCarousel(carouselId);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    startCarousel('myCarousel');
 });

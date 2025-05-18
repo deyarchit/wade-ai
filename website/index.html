@@ -114,78 +114,86 @@
                 </div>
             </div>
         </section>
-        <section id="key-ideas" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="scroll-reveal-item flex flex-col items-center text-center">
-                    <div class="reveal-letter">
-                        <img src="./assets/logo-W.svg" alt="WADE AI Logo" class="h-24 md:h-26">
-                    </div>
-                    <div class="reveal-content mt-3">
-                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Workstreams</span>
-                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            Central component of the framework that organizes key project elements: Decisions, Events,
-                            and Actions. They connect to other Workstreams to represent relationships.
+        <section id="key-ideas" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">Key Ideas</h2>
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-6">
+                    <div>                        
+                        <p class="text-gray-700">
+                            WADE is an acronym that represents the core components of the framework.  Each component plays a crucial role in capturing and contextualizing information within a project.
                         </p>
                     </div>
-                </div>
-
-                <div class="scroll-reveal-item flex flex-col items-center text-center">
-                    <div class="reveal-letter">
-                        <img src="./assets/logo-A.svg" alt="WADE AI Logo" class="h-24 md:h-26">
-                    </div>
-                    <div class="reveal-content mt-3">
-                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Actions</span>
-                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            Tasks and activities performed by users within a Workstream, driving
-                            progress towards its goals.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="scroll-reveal-item flex flex-col items-center text-center">
-                    <div class="reveal-letter">
-                        <img src="./assets/logo-D.svg" alt="WADE AI Logo" class="h-24 md:h-26">
-                    </div>
-                    <div class="reveal-content mt-3">
-                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Decisions</span>
-                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            These capture the intent and rationale behind a Workstream’s actions.
-                            They are the only elements that change a Workstream’s state, promoting mindful choices.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="scroll-reveal-item flex flex-col items-center text-center">
-                    <div class="reveal-letter">
-                        <img src="./assets/logo-E.svg" alt="WADE AI Logo" class="h-24 md:h-26">
-                    </div>
-                    <div class="reveal-content mt-3">
-                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Events</span>
-                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            Represent observations or external factors relevant to a Workstream, recorded for context and 
-                            awareness.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex justify-center my-16 scroll-reveal-item">
-                    <i class="fas fa-arrow-down text-4xl text-gray-400 reveal-letter"></i>
-                </div>
-
-
-                <div class="scroll-reveal-item flex flex-col items-center text-center">
-                    <div class="reveal-letter">
-                        <img src="./assets/logo-AI.svg" alt="WADE AI Logo" class="h-24 md:h-26">
-                    </div>
-                    <div class="reveal-content mt-3">
-                        <span class="text-2xl md:text-3xl font-semibold text-gray-800 block">Actionable Insights</span>
-                        <p class="text-lg text-gray-600 mt-4 max-w-xl mx-auto leading-relaxed">
-                            Feeding on the captured project context, AI provides summaries, answers questions, and
-                            delivers context-aware actionable insights to inform better future decisions.
-                        </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <img src="./assets/logo-W.svg" alt="WADE AI Logo" class="h-6 md:h-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Workstreams</h3>
+                                <p class="text-gray-600">
+                                    The central component of the framework, organizing key project elements: Decisions,
+                                    Events, and Actions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <img src="./assets/logo-A.svg" alt="WADE AI Logo" class="h-6 md:h-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Actions</h3>
+                                <p class="text-gray-600">
+                                    Tasks and activities performed by users within a Workstream, driving progress towards
+                                    its goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <img src="./assets/logo-D.svg" alt="WADE AI Logo" class="h-6 md:h-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Decisions</h3>
+                                <p class="text-gray-600">
+                                    Capture the intent and rationale behind a Workstream’s actions. They are the only
+                                    elements that change a Workstream’s state.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <img src="./assets/logo-E.svg" alt="WADE AI Logo" class="h-6 md:h-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">Events</h3>
+                                <p class="text-gray-600">
+                                    Observations or external factors relevant to a Workstream, recorded for context and
+                                    awareness.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="carousel" id="myCarousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="./assets/Human-Human.png" alt="Workstream Relationships" class="w-full h-full object-contain"/>                            
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/Human-Agent.png" alt="Workstream Logs" class="w-full h-full object-contain"/>
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/Agent-Agent.png" alt="AI Insights" class="w-full h-full object-contain"/>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control-button prev">
+                            <i class="ph-bold ph-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-button next">
+                            <i class="ph-bold ph-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button class="carousel-indicator active"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="features" class="py-16">
