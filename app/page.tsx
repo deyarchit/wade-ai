@@ -6,6 +6,18 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { FaSitemap, FaClockRotateLeft, FaRobot } from "react-icons/fa6";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faWrench,
+  faFolderOpen,
+  faQuestionCircle,
+  faStopwatch,
+  faLink,
+  faShieldAlt,
+  faBullseye,
+  faBrain,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button"
 import {
   Carousel,
@@ -47,9 +59,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <Button variant="ghost" size="sm" className="md:hidden">
-            Menu
-          </Button>
         </nav>
       </header>
 
@@ -65,48 +74,69 @@ export default function Home() {
 
         <section id="challenge" className="pt-40">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">Unlocking Effective Decisions</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
+              Unlocking Effective Decisions
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
               <div className="text-lg leading-relaxed space-y-10">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">The Challenge: Scattered Context & Ineffective Decisions</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    The Challenge: Scattered Context & Ineffective Decisions
+                  </h3>
                   <ul className="list-none space-y-3 pl-1">
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🔧</span>
-                      <span>Modern tools streamline tasks, but crucial project context gets scattered across them.</span>
+                      {/* <FontAwesomeIcon icon={faWrench} className="text-gray-500 mt-1" /> */}
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Modern tools streamline tasks, but crucial project context gets scattered across them.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🗂️</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
                       <span>Decision rationales are not captured and get easily lost.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">❓</span>
-                      <span>Understanding the "why" behind past decisions is vital for future success, but often unclear and difficult to find.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Understanding the "why" behind past decisions is vital for future success, but often unclear and difficult to find.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">⏱️</span>
-                      <span>Decision-making context is often pulled from our memories, which can be influenced by biases.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Decision-making context is often pulled from our memories, which can be influenced by biases.
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">The Solution: Organized Context & Well-Informed Decisions</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    The Solution: Organized Context & Well-Informed Decisions
+                  </h3>
                   <ul className="list-none space-y-3 pl-1">
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🔗</span>
-                      <span>Provides a simple, unifying framework to organize fragmented information.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Provides a simple, unifying framework to organize fragmented information.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🛡️</span>
-                      <span>Keeps everyone aligned by creating a reliable and shared source of truth.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Keeps everyone aligned by creating a reliable and shared source of truth.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🎯</span>
-                      <span>Encourages clear ownership and transparent rationale for decisions.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Encourages clear ownership and transparent rationale for decisions.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-gray-500">🧠</span>
-                      <span>Enables truly informed decision-making with AI-powered insights.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <span>
+                        Enables truly informed decision-making with AI-powered insights.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -118,6 +148,7 @@ export default function Home() {
                   width={600}
                   height={400}
                   className="max-w-full"
+                  unoptimized={true}
                 />
               </div>
             </div>
@@ -128,27 +159,57 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">Key Ideas</h2>
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
-              <p className="text-gray-700">
-                WADE is an acronym that represents the core components of the framework. Each component plays a crucial role in capturing and contextualizing information within a project.
-              </p>
+              <div>
+                <p className="text-gray-700">
+                  WADE is an acronym that represents the core components of the framework. Each component
+                  plays a crucial role in capturing and contextualizing information within a project.
+                </p>
+              </div>
               <div className="space-y-4">
-                {["W", "A", "D", "E"].map(letter => (
-                  <div key={letter} className="flex items-start gap-2">
-                    <Image src={`/logo-${letter}.svg`} alt={`${letter} logo`} width={32} height={32} />
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">{letter === 'W' ? 'Workstreams' : letter === 'A' ? 'Actions' : letter === 'D' ? 'Decisions' : 'Events'}</h3>
-                      <p className="text-gray-600">
-                        {letter === 'W' && 'The central component of the framework, organizing key project elements: Decisions, Events, and Actions.'}
-                        {letter === 'A' && 'Tasks and activities performed by users within a Workstream, driving progress towards its goals.'}
-                        {letter === 'D' && 'Capture the intent and rationale behind a Workstream’s actions. They are the only elements that change a Workstream’s state.'}
-                        {letter === 'E' && 'Observations or external factors relevant to a Workstream, recorded for context and awareness.'}
-                      </p>
-                    </div>
+                <div className="flex items-start gap-2">
+                  <Image src="/logo-W.svg" alt="WADE AI Logo" width={30} height={30} />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Workstreams</h3>
+                    <p className="text-gray-600">
+                      The central component of the framework, organizing key project elements: Decisions,
+                      Events, and Actions.
+                    </p>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-start gap-2">
+                  <Image src="/logo-A.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Actions</h3>
+                    <p className="text-gray-600">
+                      Tasks and activities performed by users within a Workstream, driving progress
+                      towards
+                      its goals.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Image src="/logo-D.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Decisions</h3>
+                    <p className="text-gray-600">
+                      Capture the intent and rationale behind a Workstream’s actions. They are the only
+                      elements that change a Workstream’s state.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Image src="/logo-E.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Events</h3>
+                    <p className="text-gray-600">
+                      Observations or external factors relevant to a Workstream, recorded for context and
+                      awareness.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="w-auto h-full -mt-6 ml-8">
+            <div className="w-auto h-full -mt-6 ml-8 mr-8">
               <Carousel
                 plugins={[plugin.current]}
                 className="p-4"
@@ -174,45 +235,45 @@ export default function Home() {
         </section>
 
         <section id="features" className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">
-          Features
-        </h2>
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">
+              Features
+            </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            icon={<FaSitemap />}
-            header="Quick Discovery & Insights"
-            description="Discover workstreams through an interactive visual tree which surfaces status."
-            imageSrc="/WS_Relationships.gif"
-            imageAlt="Workstream Relationships"
-          />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <FeatureCard
+                icon={<FaSitemap />}
+                header="Quick Discovery & Insights"
+                description="Discover workstreams through an interactive visual tree which surfaces status."
+                imageSrc="/WS_Relationships.gif"
+                imageAlt="Workstream Relationships"
+              />
 
-          <FeatureCard
-            icon={<FaClockRotateLeft />}
-            header="Effective Timeline Visualization"
-            description="See a time-based log of decisions, actions & events related to the workstream."
-            imageSrc="/WS_Logs.gif"
-            imageAlt="Workstream Logs"
-          />
+              <FeatureCard
+                icon={<FaClockRotateLeft />}
+                header="Effective Timeline Visualization"
+                description="See a time-based log of decisions, actions & events related to the workstream."
+                imageSrc="/WS_Logs.gif"
+                imageAlt="Workstream Logs"
+              />
 
-          <FeatureCard
-            icon={<FaRobot />}
-            header="AI Powered Insights"
-            description="Get a personalized AI assistant who will answer your workstream related questions and help you make informed decisions!"
-            imageSrc="/WS_AI.gif"
-            imageAlt="Workstream AI Assistant"
-          />
-        </div>
-      </div>
-    </section>
+              <FeatureCard
+                icon={<FaRobot />}
+                header="AI Powered Insights"
+                description="Get a personalized AI assistant who will answer your workstream related questions and help you make informed decisions!"
+                imageSrc="/WS_AI.gif"
+                imageAlt="Workstream AI Assistant"
+              />
+            </div>
+          </div>
+        </section>
 
         <section id="vision" className="py-16 mt-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Vision</h2>
             <div className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               <p>
-                To empower individuals, teams, and organizations to operate with integrity and transparency, fostering a world where decisions are made with the most accurate and unbiased insights.
+                To empower individuals, teams, and organizations to operate with integrity and transparency, fostering a workplace where decisions are made with the most accurate and unbiased insights.
               </p>
             </div>
           </div>
