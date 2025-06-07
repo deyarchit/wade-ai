@@ -8,17 +8,8 @@ import Link from "next/link"
 import { FaSitemap, FaClockRotateLeft, FaRobot } from "react-icons/fa6";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faWrench,
-  faFolderOpen,
-  faQuestionCircle,
-  faStopwatch,
-  faLink,
-  faShieldAlt,
-  faBullseye,
-  faBrain,
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@/components/ui/button"
 import {
   Carousel,
   CarouselContent,
@@ -28,9 +19,6 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import FeatureCard from "@/components/feature-card"
-
-import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "@/components/ui/card"
-import { ArrowRight, Github, Linkedin, Mail, Users, Share2, Target, Award, TrendingDown, Heart } from "lucide-react"
 
 export default function Home() {
   const plugin = React.useRef(
@@ -98,7 +86,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
                       <span>
-                        Understanding the "why" behind past decisions is vital for future success, but often unclear and difficult to find.
+                        Understanding the &quot;why&quot; behind past decisions is vital for future success, but often unclear and difficult to find.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
