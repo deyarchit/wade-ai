@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Archit Dey",
-  description: "Archit Dey Portfolio",
+  title: "WADE AI",
+  description: "WADE AI",
 };
 
 export default function RootLayout({
