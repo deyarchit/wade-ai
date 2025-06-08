@@ -180,7 +180,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Image src="/logo-E.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <Image src="./logo-E.svg" alt="WADE AI Logo" width={24} height={24} />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Events</h3>
                     <p className="text-gray-600">
