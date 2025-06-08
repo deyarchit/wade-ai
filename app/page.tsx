@@ -65,65 +65,58 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
               Unlocking Effective Decisions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div className="text-lg leading-relaxed space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-gray-600">
+              <div className="leading-relaxed space-y-10">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">
                     The Challenge: Scattered Context & Ineffective Decisions
                   </h3>
                   <ul className="list-none space-y-3 pl-1">
                     <li className="flex items-start gap-3">
-                      {/* <FontAwesomeIcon icon={faWrench} className="text-gray-500 mt-1" /> */}
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Modern tools streamline tasks, but crucial project context gets scattered across them.
+                        <span className="font-bold">Project context is scattered across multiple apps</span>, making it difficult to get a complete and accurate picture of the project.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
-                      <span>Decision rationales are not captured and get easily lost.</span>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
+                      <span><span className="font-bold">Decision rationales are rarely captured</span> within the project context and are often pulled from our memories.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Understanding the &quot;why&quot; behind past decisions is vital for future success, but often unclear and difficult to find.
+                        <span className="font-bold">Gathering crucial decision-making context is time-consuming and often inaccurate</span>, as information is scattered across various tools during product development.
                       </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
-                      <span>
-                        Decision-making context is often pulled from our memories, which can be influenced by biases.
-                      </span>
-                    </li>
+                    </li>                    
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4">
                     The Solution: Organized Context & Well-Informed Decisions
                   </h3>
-                  <ul className="list-none space-y-3 pl-1">
+                  <ul className="list-none space-y-3 pl-1">                    
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Provides a simple, unifying framework to organize fragmented information.
+                        A <span className="font-bold">shared source of truth for your projects</span>, ensuring everyone stays aligned and works from the same facts.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Keeps everyone aligned by creating a reliable and shared source of truth.
+                        <span className="font-bold">Enables capturing decisions within project context</span>, allowing you to easily understand their rationale. 
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Encourages clear ownership and transparent rationale for decisions.
+                        <span className="font-bold">AI helps you make decisions effectively</span> by bringing accurate insights quickly.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1"/>
+                      <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        Enables truly informed decision-making with AI-powered insights.
+                        <span className="font-bold">Gain visibility</span> into actions and decisions taken by human and AI agents. 
                       </span>
                     </li>
                   </ul>
@@ -143,13 +136,14 @@ export default function Home() {
           </div>
         </section>
 
+
         <section id="key-ideas" className="py-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">Key Ideas</h2>
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
               <div>
                 <p className="text-gray-700">
-                  WADE is an acronym that represents the core components of the framework. Each component
+                  <span className="font-bold">WADE</span> is an acronym that represents the core components of the framework. Each component
                   plays a crucial role in capturing and contextualizing information within a project.
                 </p>
               </div>
