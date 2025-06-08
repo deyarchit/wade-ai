@@ -8,7 +8,7 @@ clean:
 	@echo "Cleaning up..."
 	rm -rf dist
 
-build:
+build: clean
 	@echo "Building website..."
 	npm run build
 
@@ -21,7 +21,7 @@ deploy: build
 		echo "Deploying website to bucket under folder $$SHA..."; \
 		gcloud storage cp --recursive dist/* gs://wade-ai-website/$$SHA/; \
 		echo "Deploying website to bucket under root..."; \
-		gcloud storage cp --recursive dist/* gs://wade-ai-website/current/; \
+		gcloud storage cp --recursive dist/* gs://wade-ai-website/; \
 	fi
 
 
