@@ -26,9 +26,9 @@ export default function Home() {
   )
 
   const slides = [
-    "/Human-Human.png",
-    "/Human-Agent.png",
-    "/Agent-Agent.png",
+    "./Human-Human.png",
+    "./Human-Agent.png",
+    "./Agent-Agent.png",
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       <header className="fixed w-full top-0 z-10 bg-white shadow-sm">
         <nav className="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
           <Link href="/">
-            <Image src="/full_logo.svg" alt="WADE AI Logo" width={200} height={500} className="h-10 md:h-12" />
+            <Image src="./full_logo.svg" alt="WADE AI Logo" width={200} height={500} className="h-10 md:h-12" />
           </Link>
           <ul className="hidden md:flex space-x-6 text-gray-900">
             {["challenge", "key-ideas", "features", "vision"].map(id => (
@@ -124,7 +124,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center items-center">
                 <Image
-                  src="/Systems-Diagram.svg"
+                  src="./Systems-Diagram.svg"
                   alt="Scattered info vs organized context diagram"
                   width={600}
                   height={400}
@@ -149,7 +149,7 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-2">
-                  <Image src="/logo-W.svg" alt="WADE AI Logo" width={30} height={30} />
+                  <Image src="./logo-W.svg" alt="WADE AI Logo" width={30} height={30} />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Workstreams</h3>
                     <p className="text-gray-600">
@@ -159,7 +159,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Image src="/logo-A.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <Image src="./logo-A.svg" alt="WADE AI Logo" width={24} height={24} />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Actions</h3>
                     <p className="text-gray-600">
@@ -170,7 +170,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Image src="/logo-D.svg" alt="WADE AI Logo" width={24} height={24} />
+                  <Image src="./logo-D.svg" alt="WADE AI Logo" width={24} height={24} />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Decisions</h3>
                     <p className="text-gray-600">
@@ -227,7 +227,7 @@ export default function Home() {
                 icon={<FaSitemap />}
                 header="Quick Discovery & Insights"
                 description="Discover workstreams through an interactive visual tree which surfaces status."
-                imageSrc="/WS_Relationships.gif"
+                imageSrc="./WS_Relationships.gif"
                 imageAlt="Workstream Relationships"
               />
 
@@ -235,7 +235,7 @@ export default function Home() {
                 icon={<FaClockRotateLeft />}
                 header="Effective Timeline Visualization"
                 description="See a time-based log of decisions, actions & events related to the workstream."
-                imageSrc="/WS_Logs.gif"
+                imageSrc="./WS_Logs.gif"
                 imageAlt="Workstream Logs"
               />
 
@@ -243,7 +243,7 @@ export default function Home() {
                 icon={<FaRobot />}
                 header="AI Powered Insights"
                 description="Get a personalized AI assistant who will answer your workstream related questions and help you make informed decisions!"
-                imageSrc="/WS_AI.gif"
+                imageSrc="./WS_AI.gif"
                 imageAlt="Workstream AI Assistant"
               />
             </div>
