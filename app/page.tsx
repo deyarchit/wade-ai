@@ -39,7 +39,7 @@ export default function Home() {
             <Image src="./full_logo.svg" alt="WADE AI Logo" width={200} height={500} className="h-10 md:h-12" />
           </Link>
           <ul className="hidden md:flex space-x-6 text-gray-900">
-            {["challenge", "key-ideas", "features", "vision"].map(id => (
+            {["challenge", "key-ideas", "features", "demo", "vision"].map(id => (
               <li key={id}>
                 <a href={`#${id}`} className="hover:text-teal-500 transition duration-300 capitalize">
                   {id.replace("-", " ")}
@@ -87,14 +87,14 @@ export default function Home() {
                       <span>
                         <span className="font-bold">Gathering crucial decision-making context is time-consuming and often inaccurate</span>, as information is scattered across various tools during product development.
                       </span>
-                    </li>                    
+                    </li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4">
                     The Solution: Organized Context & Well-Informed Decisions
                   </h3>
-                  <ul className="list-none space-y-3 pl-1">                    
+                  <ul className="list-none space-y-3 pl-1">
                     <li className="flex items-start gap-3">
                       <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
@@ -104,7 +104,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        <span className="font-bold">Enables capturing decisions within project context</span>, allowing you to easily understand their rationale. 
+                        <span className="font-bold">Enables capturing decisions within project context</span>, allowing you to easily understand their rationale.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -116,7 +116,7 @@ export default function Home() {
                     <li className="flex items-start gap-3">
                       <FontAwesomeIcon icon={faCircleArrowRight} className="text-gray-500 mt-1" />
                       <span>
-                        <span className="font-bold">Gain visibility</span> into actions and decisions taken by human and AI agents. 
+                        <span className="font-bold">Gain visibility</span> into actions and decisions taken by human and AI agents.
                       </span>
                     </li>
                   </ul>
@@ -250,7 +250,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" className="py-16 mt-16">
+        <section id="demo" className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-12">
+              Demo
+            </h2>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-xl p-8 mx-auto bg-white border rounded-lg shadow-md">
+                <video width="1280" height="720" controls preload="none">
+                  <source src="./WADE AI Product Demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="vision" className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Vision</h2>
             <div className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
