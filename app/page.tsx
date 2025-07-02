@@ -271,7 +271,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-semibold mb-8">Vision</h2>
             <div className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               <p>
-                To empower individuals, teams, and organizations to operate with integrity and transparency, fostering a workplace where decisions are made with the most accurate and unbiased insights.
+                To empower individuals, teams, and organizations to operate with integrity and transparency, by providing a unified understanding of their work that enables well-informed decisions.
               </p>
             </div>
           </div>
