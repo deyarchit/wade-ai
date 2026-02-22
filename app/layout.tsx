@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "WADE AI",
   description: "WADE AI",
+  icons: { icon: "/logo-W.svg" },
 };
 
 export default function RootLayout({
