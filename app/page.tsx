@@ -36,7 +36,7 @@ export default function Home() {
       <header className="fixed w-full top-0 z-10 bg-white shadow-sm">
         <nav className="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
           <Link href="/">
-            <Image src="./full_logo.svg" alt="WADE AI Logo" width={200} height={500} className="h-10 md:h-12" />
+            <Image src="/full_logo.svg" alt="WADE AI Logo" width={200} height={500} className="h-10 md:h-12" />
           </Link>
           <ul className="hidden md:flex space-x-6 text-gray-900">
             {["challenge", "key-ideas", "features", "demo", "vision"].map(id => (
